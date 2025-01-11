@@ -70,3 +70,9 @@ um valor.
 
 - Síncrono ou Assíncrono: Observables podem entregar valores de forma síncrona
 ou assíncrona, dependendo da lógica interna.
+
+## Componentes pais e filhos
+
+Ex.: A page/componente home é pai do componente weather-card.
+
+Componentes pais são os compoenentes que normalmente passam as informações para o componentes filhos (dumb).

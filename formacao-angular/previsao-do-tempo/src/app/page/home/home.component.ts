@@ -6,11 +6,16 @@ import { Subject, takeUntil } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WeatherCardComponent } from "../../components/weather-card/weather-card.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, FontAwesomeModule],
+  imports: [
+    CommonModule, FormsModule, 
+    FontAwesomeModule, WeatherCardComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

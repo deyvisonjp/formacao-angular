@@ -1,12 +1,10 @@
 :root {
-  --blue-1: #1e3a8a;
-  --blue-2: #2563eb;
-  --white: #ffffff;
-  --grey-1: #f3f4f6;
-  --grey-2: #d1d5db;
-  --shadow-dark: rgba(0, 0, 0, 0.2);
-  --shadow-light: rgba(255, 255, 255, 0.3);
-  --accent-color: #ffcc00;
+  --blue-1: #2c3e50; 
+  --blue-2: #34495e; 
+  --white: #ecf0f1; 
+  --grey-1: #95a5a6;
+  --shadow-dark: rgba(0, 0, 0, 0.5); 
+  --shadow-light: rgba(255, 255, 255, 0.2); 
 }
 
 * {
@@ -16,7 +14,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   width: 100%;
   height: 100%;
@@ -26,34 +24,37 @@ body {
   align-items: center;
 }
 
-.container {
-  width: 450px;
-  height: 80vh;
-  background-color: var(--blue-2);
-  border-radius: 15px;
-  box-shadow: 0 4px 30px var(--shadow-dark);
-  margin-top: 2rem;
-  overflow: hidden;
-  transition: transform 0.3s;
+fa-icon {
+  color: #ffffff;
 }
 
-.container:hover {
-  transform: translateY(-5px);
+.container {
+  width: 500px;
+  height: 80vh;
+  background-color: var(--blue-2);
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+  margin-top: 3rem;
 }
 
 .upper-data {
-  width: 100%;
-  height: 50%;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .lower-data {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  flex: 1;
+  height: 50%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 
 .upper-data img {
@@ -62,7 +63,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .weather-data {
@@ -70,7 +70,7 @@ body {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--shadow-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,29 +80,37 @@ body {
 .location {
   color: var(--white);
   text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 0.5rem;
+  font-size: 1.2em;
 }
 
 .temperature {
-  color: var(--accent-color);
-  font-size: 5em;
+  color: var(--white);
+  font-size: 4em;
   text-align: center;
   font-weight: 900;
 }
 
 .more-info-label {
   color: var(--white);
-  font-size: 1.5em;
+  font-size: 1.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 0.5rem;
 }
 
 .more-info-container {
   flex: 1;
-  background-color: var(--grey-1);
-  border-radius: 0 0 15px 15px;
-  margin-top: -1px;
-  padding: 1rem;
+  background-color: var(--shadow-dark);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -111,28 +119,31 @@ body {
 .info-block {
   width: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .info-block-label {
-  width: 100%;
-  text-align: center;
-  color: var(--grey-2);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-block-label span {
-  font-size: 0.9em;
+  color: var(--white);
+  font-size: 0.8em;
+  margin-top: 0.4em;
 }
 
 .info-block-value {
-  width: 100%;
+  width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  color: var(--blue-2);
-  font-size: 1.2em;
+  color: var(--white);
 }
 
 .search {
@@ -141,22 +152,16 @@ body {
 }
 
 .search input {
-  background-color: var(--grey-2);
-  border: none;
-  border-radius: 25px;
-  padding: 0.8em 1em;
-  color: var(--blue-2);
-  font-size: 1em;
-  width: 75%;
-  transition: background-color 0.3s;
-}
-
-.search input:focus {
-  background-color: var(--white);
+  background-color: var(--shadow-dark);
   outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  width: 70%;
 }
-
 .search-icon {
-  margin-left: 0.5em;
-  color: var(--blue-2);
+  margin-left: 1em;
 }

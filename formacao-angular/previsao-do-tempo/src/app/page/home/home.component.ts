@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private readonly destroy$: Subject<void> = new Subject();
 
-  cidadeInicial = "Minas Gerais";
+  cidadeInicial = "Patrocínio do Muriaé";
   weatherDatas!: IWeatherData;
   searchIcon = faMagnifyingGlass;
 
@@ -49,14 +49,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     this.getWeatherDatas(this.cidadeInicial);
-    console.log(this.cidadeInicial)
     this.cidadeInicial = '';
-    console.log(this.cidadeInicial)
   }
 
   // Evitando vazamento de memória - Memory Leak
   ngOnDestroy(): void {
-    this.destroy$.next();
+    this.destroy$.next(); 
     this.destroy$.complete();
   }
 

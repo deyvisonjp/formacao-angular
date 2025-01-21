@@ -28,9 +28,3 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 
 - Node.js (versão 16 ou superior)
 - Angular CLI (versão 10 ou superior)
-
-## Como Iniciar
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/curso-angular-udemy.git

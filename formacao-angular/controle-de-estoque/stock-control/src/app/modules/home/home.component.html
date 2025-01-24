@@ -1,0 +1,64 @@
+<div class="grid">
+  <div class="col-12">
+    <div class="flex justify-content-center align-items-center text-center vh-100">
+      <!-- LOGIN -->
+      <form class="transparent-card" *ngIf="loginCard">
+        <p-card
+          styleClass="mt-10"
+          header="Login"
+          subheader="Faça login com sua conta existente!"
+        >
+          <div class="p-fluid">
+            <div class="field">
+              <input id="email" type="email" pInputText placeholder="Email" />
+            </div>
+            <div class="field mt-3">
+              <input id="password" type="password" pInputText placeholder="Senha" />
+            </div>
+            <div class="field mt-3">
+              <button type="submit" pButton pRipple label="Login" class="w-full"></button>
+            </div>
+            <div class="field mt-3">
+              <span
+                class="text-red-600 font-semibold cursor-pointer"
+                (click)="loginCard = !loginCard"
+                >Criar Conta</span
+              >
+            </div>
+          </div>
+        </p-card>
+      </form>
+
+      <!-- SIGNUP -->
+      <form class="transparent-card" *ngIf="!loginCard">
+        <p-card
+          styleClass="mt-10 transparent-card"
+          header="Criar conta"
+          subheader="Crie já sua conta gratuita!"
+        >
+          <div class="p-fluid">
+            <div class="field">
+              <input id="name" type="text" pInputText placeholder="Nome" />
+            </div>
+            <div class="field mt-3">
+              <input id="email" type="email" pInputText placeholder="Email" />
+            </div>
+            <div class="field mt-3">
+              <input id="password" type="password" pInputText placeholder="Senha" />
+            </div>
+            <div class="field mt-3">
+              <button type="submit" pButton pRipple label="Criar conta" class="w-full"></button>
+            </div>
+            <div class="field mt-3">
+              <span
+                class="text-red-600 font-semibold cursor-pointer"
+                (click)="loginCard = !loginCard"
+                >Fazer login</span
+              >
+            </div>
+          </div>
+        </p-card>
+      </form>
+    </div>
+  </div>
+</div>
